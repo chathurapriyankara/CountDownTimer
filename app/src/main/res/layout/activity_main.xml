@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chathura.myapplication.MainActivity">
+
+    <EditText
+        android:id="@+id/firstNumberInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/secondNumberInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/firstNumberInput"
+        android:layout_alignStart="@+id/firstNumberInput"
+        android:layout_below="@+id/firstNumberInput"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/secondNumberInput"
+        android:layout_alignStart="@+id/secondNumberInput"
+        android:layout_below="@+id/secondNumberInput"
+        android:layout_marginTop="40dp"
+        android:onClick="calculate"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/plusButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/plusButton"
+        android:layout_toRightOf="@+id/plusButton"
+        android:onClick="calculate"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/minusButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/minusButton"
+        android:layout_toRightOf="@+id/minusButton"
+        android:onClick="calculate"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/divisionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/multiplyButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/multiplyButton"
+        android:layout_toRightOf="@+id/multiplyButton"
+        android:onClick="calculate"
+        android:text="/" />
+
+    <TextView
+        android:id="@+id/resultsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/minusButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="TextView" />
+</RelativeLayout>
